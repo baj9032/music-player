@@ -1,0 +1,44 @@
+<mat-card class="container">
+  <mat-card-header> <mat-card-title>Login</mat-card-title> </mat-card-header>
+  <mat-divider></mat-divider>
+  <br />
+  <form #signIn="ngForm">
+    <mat-form-field>
+      <input
+        required
+        [(ngModel)]="signInModel.userName"
+        name="userName"
+        #userName="ngModel"
+        matInput
+        placeholder="User Name"
+      />
+      <mat-error [hidden]="userName.valid || userName.pristine"
+        >User Name is required</mat-error
+      >
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <input
+        required
+        [(ngModel)]="signInModel.password"
+        name="password"
+        #password="ngModel"
+        type="password"
+        matInput
+        placeholder="Password"
+      />
+      <mat-error [hidden]="password.valid || password.pristine"
+        >Password is required</mat-error
+      >
+    </mat-form-field>
+    <br />
+
+    <button
+      (click)="onSubmit()"
+      [disabled]="!signIn.form.valid"
+      mat-stroked-button
+    >
+      Login
+    </button>
+  </form>
+</mat-card>

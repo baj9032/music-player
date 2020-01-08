@@ -1,0 +1,14 @@
+.container {
+  position: absolute;
+  top: 50%;
+  width: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+mat-form-field {
+  width: 100%;
+}
+.header-title {
+  background: #3f51b5;
+}
